@@ -1,0 +1,227 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+  }
+@font-face {
+    font-family: 'Segoe-ui-historic'; /* Use single quotes for font names with spaces */
+    src: url('../public/fonts/Segoe-ui-historic.ttf') format('truetype'); /* Specify the format */
+    font-weight: 700; /* Specify the font weight */
+}
+.navBar {
+    display: flex;
+    height: 10vh;
+    padding: 5px 5px 5px 15px;
+    align-items: center;
+}
+.search-container {
+    position: relative;
+    left: 8px;
+    width: 275px;
+}
+
+/* Style for the search input */
+.search-input {
+    width: 100%;
+    padding: 10px 30px 10px 10px; /* Adjust padding as needed */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+.searchBar {
+    height: 8vh;
+    width: 275px;
+    border-radius: 20px;
+    border: none;
+    background-color: #f0f2f5;
+}
+/* Style for the search icon */
+.leftSide .search-container img {
+    position: absolute;
+    top: 43%;
+    left: 0px;
+    transform: translateY(-50%);
+    background-color: #f0f2f5;
+    border-radius: 50%;
+    height: 39px;
+}
+.searchBar::placeholder {
+    padding-left: 40px; /* Adjust the padding to shift the placeholder text */
+}
+.leftSide img {
+    cursor: pointer;
+}
+.searchImgDiv {
+    
+    height: 42px;
+    width: 42px;
+    border-radius: 50%;
+    background-color: #f0f2f5;
+
+}
+.leftSide {
+    display: flex;
+}
+.centerSide {
+    display: flex;
+    align-items: center;
+}
+.centerSide ul {
+    display: flex;
+    list-style-type: none;
+}
+.centerSide li {
+    width: 15vh;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 8px;
+    text-align: center;
+    cursor: pointer;
+}
+.centerSide li:hover {
+    background-color: #f0f2f5;
+    border-radius: 6px;
+}
+.centerSide ul img {
+    height: 4.5vh;
+}
+.rightSide {
+    display: flex;
+    width: -webkit-fill-available;
+    justify-content: flex-end;
+}
+.rightSide img {
+    border-radius: 50%;
+    background-color: #e4e6eb;
+    margin: 0 10px;
+    cursor: pointer;
+}
+.rightSide img:nth-child(3) {
+    height: 8vh;
+    width: 8vh;
+    object-fit: cover;
+}
+.navBar img {
+    height: 8vh;
+}
+.coverPage {
+    height: -webkit-fill-available;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(180deg, #80808078 0%, #00000045 18%, #fff, #fff);
+}
+.coverImg {
+    height: 57vh;
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    border-radius: 0px 0px 10px 10px;
+}
+.coverImg img {
+    height: 100%;
+    object-fit: cover;
+    width: -webkit-fill-available;
+    border-radius: 0px 0px 10px 10px;
+}
+.coverBottom {
+    height: 23vh;
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+}
+.profileImg {
+    height: 175px;
+    width: 175px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: 35px;
+    top: -75px;
+    background-color: #fff;
+}
+.profileImg img {
+    height: 95%;
+    border-radius: 50%;
+    width: 95%;
+    object-fit: cover;
+}
+.profileInfo {
+    position: relative;
+    left: -90px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20px;
+}
+.profileName {
+    font-size: 30px;
+    font-weight: bold;
+    font-family: sans-serif;
+    line-height: 1.4em;
+}
+.profileSubText {
+    color: #65676b;
+    font-size: 15px;
+    font-weight: 700;
+    font-family: sans-serif;
+}
+.coverBtn {
+    right: 45px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: -35px;
+}
+.coverBtn button {
+    font-size: 15px;
+    margin: 10px;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #0866ff;
+    color: #fff;
+    cursor: pointer;
+}
+.homeMainDiv, .projectsMainDiv, .aboutMainDiv, .contactMainDiv {
+    height: 100vh;
+    text-align: center;
+}
+.bottomNavBar {
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    position: sticky;
+    top: 0px;
+    text-align: center;
+    margin: 0 auto;
+    justify-content: center;
+    box-shadow: 0px 8px 20px 0px #80808033;
+    background-color: #fff;
+    z-index: 1;
+}
+.bottomNavList {
+    display: flex;
+    list-style-type: none;
+    width: 75%;
+}
+.bottomLists {
+    padding: 15px 25px;
+    margin: 0px 15px 5px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: sans-serif;
+}
+.bottomLists.active {
+    border-bottom: 5px solid #0866ff;
+    color: #0866ff;
+    font-weight: 700;
+}
