@@ -8,6 +8,7 @@ import About from "./Component/Section/About";
 import Contact from "./Component/Section/Contact";
 import Projects from "./Component/Section/Projects";
 import NavigationBar2 from "./Component/NavigationBar2";
+import Work from "./Component/Section/Work";
 
 function App() {
   return (
@@ -16,8 +17,9 @@ function App() {
       <Cover />
       <NavigationBar2 />
       <About />
-      <Home />
+      <Work />
       <Projects />
+      <Home />
       <Contact />
     </div>
   );
