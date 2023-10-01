@@ -15,7 +15,6 @@
     "web-vitals": "^2.1.4"
   },
   "homepage": "https://shubham-pawar9.github.io/my-portfolio",
-
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

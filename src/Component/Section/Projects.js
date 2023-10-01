@@ -9,22 +9,27 @@ const Projects = () => {
   };
   return (
     <>
-      <div id="project" className="projectsMainDiv">
+      <div id="project" className="projectsMainDiv allMainDiv">
         <div className="infoDiv">
           <iframe
             id="projectIframe"
             width="100%"
             height="100%"
             src={projectUrl}
-            frameborder="0"
-            allowfullscreen
+            frameBorder="0"
+            allowFullScreen
           ></iframe>
         </div>
         <div className="socialDiv">
-          <h3>Explore some of my latest projects on GitHub</h3>
+          <h3 className="projects github">
+            Explore some of my latest projects on GitHub
+          </h3>
           <div className="introText">
             <div className="introduction">
-              <img src="./images/ai-tool.png" alt="icon" />
+              <img
+                src={process.env.PUBLIC_URL + "/images/ai-tool.png"}
+                alt="icon"
+              />
               <div
                 className="textDiv"
                 onClick={() =>
@@ -50,7 +55,10 @@ const Projects = () => {
               </div>
             </div>
             <div className="introduction">
-              <img src="./images/elevator.png" alt="icon" />
+              <img
+                src={process.env.PUBLIC_URL + "/images/elevator.png"}
+                alt="icon"
+              />
               <div
                 className="textDiv"
                 onClick={() =>
@@ -81,7 +89,10 @@ const Projects = () => {
               </div>
             </div>
             <div className="introduction">
-              <img src="./images/table.png" alt="icon" />
+              <img
+                src={process.env.PUBLIC_URL + "/images/table.png"}
+                alt="icon"
+              />
               <div
                 className="textDiv"
                 onClick={() =>
@@ -114,7 +125,10 @@ const Projects = () => {
               </div>
             </div>
             <div className="introduction">
-              <img src="./images/news.png" alt="icon" />
+              <img
+                src={process.env.PUBLIC_URL + "/images/news.png"}
+                alt="icon"
+              />
               <div
                 className="textDiv"
                 onClick={() =>
@@ -143,7 +157,10 @@ const Projects = () => {
               </div>
             </div>
             <div className="introduction">
-              <img src="./images/list.png" alt="icon" />
+              <img
+                src={process.env.PUBLIC_URL + "/images/list.png"}
+                alt="icon"
+              />
               <div
                 className="textDiv"
                 onClick={() =>
@@ -173,7 +190,10 @@ const Projects = () => {
               </div>
             </div>
             <div className="introduction">
-              <img src="./images/piano.png" alt="icon" />
+              <img
+                src={process.env.PUBLIC_URL + "/images/piano.png"}
+                alt="icon"
+              />
               <div
                 className="textDiv"
                 onClick={() =>
@@ -199,7 +219,10 @@ const Projects = () => {
               </div>
             </div>
             <div className="introduction">
-              <img src="./images/lenovo.png" alt="icon" />
+              <img
+                src={process.env.PUBLIC_URL + "/images/lenovo.png"}
+                alt="icon"
+              />
               <div
                 className="textDiv"
                 onClick={() =>

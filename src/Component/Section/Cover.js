@@ -5,13 +5,19 @@ const Cover = () => {
   };
   return (
     <>
-      <div id="cover" className="coverPage">
+      <div id="cover" className="coverPage profile allMainDiv">
         <div className="coverImg">
-          <img src="./images/cover.jpg" alt="coverImage" />
+          <img
+            src={process.env.PUBLIC_URL + "/images/cover.jpg"}
+            alt="coverImage"
+          />
         </div>
         <div className="coverBottom">
           <div className="profileImg">
-            <img src="./images/profile.jpg" alt="profileImage" />
+            <img
+              src={process.env.PUBLIC_URL + "/images/profile.jpg"}
+              alt="profileImage"
+            />
           </div>
           <div className="profileInfo">
             <p className="profileName">Shubham Pawar</p>
@@ -21,7 +27,9 @@ const Cover = () => {
             <a href="./my-contact.vcf" download="shubhContact.vcf">
               <button>Add me in contacts</button>
             </a>
-            <button onClick={handleCallMe}>Call me</button>
+            <button className="call" onClick={handleCallMe}>
+              Call me
+            </button>
           </div>
         </div>
       </div>

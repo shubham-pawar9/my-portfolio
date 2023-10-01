@@ -47,6 +47,7 @@ background-color: #f0f2f5;
     border-radius: 20px;
     border: none;
     background-color: #f0f2f5;
+    padding-left: 40px;
 }
 /* Style for the search icon */
 .leftSide .search-container img {
@@ -58,8 +59,9 @@ background-color: #f0f2f5;
     border-radius: 50%;
     height: 39px;
 }
-.searchBar::placeholder {
-    padding-left: 40px; /* Adjust the padding to shift the placeholder text */
+
+.searchBar:focus-visible {
+    outline: none;
 }
 .leftSide img {
     cursor: pointer;
@@ -366,6 +368,23 @@ background-color: #f0f2f5;
 }
 .desktopOnlyText {
     display: block;
+}
+.suggestionList {
+    position: absolute;
+    max-height: 250px;
+    /* height: auto; */
+    width: 275px;
+    padding-left: 40px;
+    overflow: auto;
+    background-color: #f0f2f5;
+    border-radius: 5px;
+}
+.suggestionList li {
+    list-style-type: none;
+    cursor: pointer;
+}
+.suggestionList li:hover{
+    color: #8c939d;
 }
 @media only screen and (max-width: 430px) and (max-height: 850px) and (orientation: portrait){
     .navBar {

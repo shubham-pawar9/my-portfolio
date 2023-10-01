@@ -1,9 +1,9 @@
 const Work = () => {
   return (
     <>
-      <div id="work" className="workMainDiv">
+      <div id="work" className="workMainDiv allMainDiv">
         <div className="infoDiv">
-          <h3>Career History</h3>
+          <h3 className="career">Career History</h3>
           <div className="introText">
             <div className="introduction">
               <div className="textDiv">
@@ -45,7 +45,10 @@ const Work = () => {
           <h3>Projects in HMX Media</h3>
           <div className="introText">
             <div className="introduction">
-              <img src="./images/dell.png" alt="icon" />
+              <img
+                src={process.env.PUBLIC_URL + "/images/dell.png"}
+                alt="icon"
+              />
               <a href="https://content.hmxmedia.com/xps-13-9315-laptop/index.html">
                 <div className="textDiv">
                   <span>Dell Technologies</span>
@@ -59,7 +62,10 @@ const Work = () => {
               </a>
             </div>
             <div className="introduction">
-              <img src="./images/sharp.png" alt="icon" />
+              <img
+                src={process.env.PUBLIC_URL + "/images/sharp.png"}
+                alt="icon"
+              />
               <a href="https://content.hmxmedia.com/sharp/index.html">
                 <div className="textDiv">
                   <span>Sharp - Kitchen Appliances</span>
@@ -70,7 +76,10 @@ const Work = () => {
               </a>
             </div>
             <div className="introduction">
-              <img src="./images/royalEnfield.png" alt="icon" />
+              <img
+                src={process.env.PUBLIC_URL + "/images/royalEnfield.png"}
+                alt="icon"
+              />
               <a href="https://makeityours.royalenfield.com/configurator/interceptor-650">
                 <div className="textDiv">
                   <span>Royal Enfield</span>
@@ -81,7 +90,10 @@ const Work = () => {
               </a>
             </div>
             <div className="introduction">
-              <img src="./images/lenovo.png" alt="icon" />
+              <img
+                src={process.env.PUBLIC_URL + "/images/lenovo.png"}
+                alt="icon"
+              />
               <a href="https://www.lenovo.com/in/en/data-center/servers/racks/ThinkSystem-SR650/p/77XX7SRSR65#tab-li-productTour">
                 <div className="textDiv">
                   <span>Lenovo</span>
