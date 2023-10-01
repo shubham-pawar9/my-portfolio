@@ -1,4 +1,17 @@
 const NavigationBar = () => {
+  const handleMyWhatsapp = () => {
+    let phoneNumber = "+917843068183";
+
+    var defaultMessage = "Hello";
+
+    var whatsappURL =
+      "https://api.whatsapp.com/send?phone=" +
+      phoneNumber +
+      "&text=" +
+      encodeURIComponent(defaultMessage);
+
+    window.open(whatsappURL);
+  };
   return (
     <>
       <div className="navBar">
@@ -33,7 +46,11 @@ const NavigationBar = () => {
           </ul>
         </div>
         <div className="rightSide">
-          <img src="./images/message.png" alt="whatsappIcon" />
+          <img
+            src="./images/message.png"
+            alt="whatsappIcon"
+            onClick={handleMyWhatsapp}
+          />
           <img src="./images/notification.png" alt="notification" />
           <img src="./images/profile.jpg" alt="account" />
         </div>

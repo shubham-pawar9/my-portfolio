@@ -9,9 +9,8 @@ const Projects = () => {
   };
   return (
     <>
-      <div className="projectsMainDiv">
+      <div id="project" className="projectsMainDiv">
         <div className="infoDiv">
-          <h3>Projects</h3>
           <iframe
             id="projectIframe"
             width="100%"
@@ -34,7 +33,15 @@ const Projects = () => {
                   )
                 }
               >
-                <span>AI-TOOL-(AI Assistant)</span>
+                <span className="mobOnlyText">
+                  <a
+                    href="https://shubham-pawar9.github.io/ai-tool-shunu/"
+                    target="_blank"
+                  >
+                    AI-TOOL-(AI Assistant)
+                  </a>
+                </span>
+                <span className="desktopOnlyText">AI-TOOL-(AI Assistant)</span>
                 <span>
                   Technologies - React.js: The entire AI assistant is built
                   using the React.js library, ensuring a modular,
@@ -52,7 +59,17 @@ const Projects = () => {
                   )
                 }
               >
-                <span>Elevator 2 Lift Demo Template</span>
+                <span className="mobOnlyText">
+                  <a
+                    href="https://shubham-pawar9.github.io/elevator-2-lifts/"
+                    target="_blank"
+                  >
+                    Elevator 2 Lift Demo Template
+                  </a>
+                </span>
+                <span className="desktopOnlyText">
+                  Elevator 2 Lift Demo Template
+                </span>
                 <span>
                   Technologies - HTML: Used to structure the content and
                   elements of the web page. CSS: Employed for styling the user
@@ -73,7 +90,17 @@ const Projects = () => {
                   )
                 }
               >
-                <span>Excel to Table Conversion</span>
+                <span className="mobOnlyText">
+                  <a
+                    href="https://shubham-pawar9.github.io/excel-to-table/"
+                    target="_blank"
+                  >
+                    Excel to Table Conversion
+                  </a>
+                </span>
+                <span className="desktopOnlyText">
+                  Excel to Table Conversion
+                </span>
                 <span>
                   Technologies - HTML and CSS: The project uses HTML and CSS for
                   creating the web page layout and styling. JavaScript:
@@ -96,7 +123,17 @@ const Projects = () => {
                   )
                 }
               >
-                <span>News Application UI Template</span>
+                <span className="mobOnlyText">
+                  <a
+                    href="https://shubham-pawar9.github.io/news-application/"
+                    target="_blank"
+                  >
+                    News Application UI Template
+                  </a>
+                </span>
+                <span className="desktopOnlyText">
+                  News Application UI Template
+                </span>
                 <span>
                   Technologies - React.js: The entire News Application is built
                   using the React.js library. use real time API to get the news
@@ -115,7 +152,17 @@ const Projects = () => {
                   )
                 }
               >
-                <span>Employee Task List UI Template</span>
+                <span className="mobOnlyText">
+                  <a
+                    href="https://shubham-pawar9.github.io/employee-task-list/"
+                    target="_blank"
+                  >
+                    Employee Task List UI Template
+                  </a>
+                </span>
+                <span className="desktopOnlyText">
+                  Employee Task List UI Template
+                </span>
                 <span>
                   Technologies - React.js: The frontend is built using React.js,
                   ensuring a dynamic and interactive user interface. Node.js:
@@ -133,7 +180,15 @@ const Projects = () => {
                   handleUrlClick("https://shubham-pawar9.github.io/piano/")
                 }
               >
-                <span>Piano</span>
+                <span className="mobOnlyText">
+                  <a
+                    href="https://shubham-pawar9.github.io/piano/"
+                    target="_blank"
+                  >
+                    Piano
+                  </a>
+                </span>
+                <span className="desktopOnlyText">Piano</span>
                 <span>
                   Technologies - HTML: Used for creating the basic structure and
                   elements of the web page. CSS: Employed for styling the visual
@@ -153,7 +208,15 @@ const Projects = () => {
                   )
                 }
               >
-                <span>Virtual Smart Watch</span>
+                <span className="mobOnlyText">
+                  <a
+                    href="https://shubham-pawar9.github.io/virtual-smart-watch/"
+                    target="_blank"
+                  >
+                    Virtual Smart Watch
+                  </a>
+                </span>
+                <span className="desktopOnlyText">Virtual Smart Watch</span>
                 <span>Technologies -</span>
               </div>
             </div>

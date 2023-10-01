@@ -5,10 +5,12 @@
 }
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
 .App {
 background-color: #f0f2f5;
 }
+
 @font-face {
     font-family: 'Segoe-ui-historic'; /* Use single quotes for font names with spaces */
     src: url('../public/fonts/Segoe-ui-historic.ttf') format('truetype'); /* Specify the format */
@@ -25,7 +27,12 @@ background-color: #f0f2f5;
     left: 8px;
     width: 275px;
 }
-
+::-webkit-scrollbar {
+    width: 6px;
+  }
+::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(transparent, #8c939d, transparent);
+  }
 /* Style for the search input */
 .search-input {
     width: 100%;
@@ -195,12 +202,13 @@ background-color: #f0f2f5;
     cursor: pointer;
 }
 .homeMainDiv, .projectsMainDiv, .aboutMainDiv, .contactMainDiv, .workMainDiv {
-    height: 88vh;
+    height: 100vh;
     text-align: center;
     width: 70%;
-    margin: 5vh auto;
+    margin: 0 auto;
     display: flex;
     flex-direction: row;
+    padding-top: 10vh;
 }
 .bottomNavBar {
     height: 10vh;
@@ -220,6 +228,17 @@ background-color: #f0f2f5;
     list-style-type: none;
     width: 75%;
     border-top: 1px solid #00000042;
+    position: absolute;
+}
+
+.bottomlistIcon {
+    height: 8vh;
+    width: 8vh;
+    border-radius: 50%;
+    object-fit: cover;
+    position: absolute;
+    right: 0;
+    top: 1vh;
 }
 .bottomLists {
     padding: 18px 25px;
@@ -228,10 +247,16 @@ background-color: #f0f2f5;
     cursor: pointer;
     font-family: sans-serif;
 }
+.bottomLists.bottomlistIcon {
+    padding: revert;
+}
 .bottomLists.active {
     border-bottom: 5px solid #0866ff;
     color: #0866ff;
     font-weight: 700;
+}
+.bottomlistIcon.bottomLists.active {
+    border: 2px solid #0866ff;
 }
 .infoDiv {
     height: 100%;
@@ -244,6 +269,7 @@ background-color: #f0f2f5;
     flex-direction: column;
     align-items: flex-start;
     padding: 10px;
+    overflow: auto;
 }
 .socialDiv {
     height: 100%;
@@ -291,7 +317,7 @@ background-color: #f0f2f5;
     display: flex;
     flex-direction: column;
 }
-.textDiv span:nth-child(2) {
+.textDiv span:nth-child(3) {
     font-size: 12px;
     font-weight: 500;
     color: #65676bab;
@@ -330,4 +356,89 @@ background-color: #f0f2f5;
 }
 .projectsMainDiv .introduction .textDiv {
     cursor: pointer;
+}
+.bottomNavList a {
+    text-decoration: none;
+    color: #000;
+}
+.mobOnlyText {
+    display: none;
+}
+.desktopOnlyText {
+    display: block;
+}
+@media only screen and (max-width: 430px) and (max-height: 850px) and (orientation: portrait){
+    .navBar {
+        display: none;
+    }
+    .mobOnlyText {
+        display: block;
+    }
+    .desktopOnlyText {
+        display: none;
+    }
+    .coverImg {
+            width: 100vw;
+            height: 40vw;
+    }
+    .coverBottom {
+        display: flex;
+    height: fit-content;
+    flex-direction: column;
+    width: 85%;
+    }
+    .profileImg {
+        height: 130px;
+        width: 130px;
+        left: 0px;
+        top: -58px;
+    }
+    .profileInfo {
+        left: 0px;
+        top: -75px;
+    }
+    .coverBtn {
+        top: -66px;
+        left: 0px;
+    }
+    .coverBtn button {
+        margin-left: 0;
+    }
+    .bottomNavBar {
+        height: 8vh;
+    }
+    .bottomNavList {
+        width: 100%;
+    display: flex;
+    align-items: center;
+    }
+    .bottomLists {
+        padding: 5px;
+    }
+    .homeMainDiv, .projectsMainDiv, .aboutMainDiv, .contactMainDiv, .workMainDiv
+    {
+        padding-top: 2vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: -webkit-fill-available;
+    }
+    .infoDiv {
+        width: 100vw;
+    }
+    #project .infoDiv {
+        display: none;
+    }
+    .projectsMainDiv .socialDiv {
+        margin-top: 0;
+    }
+    .socialDiv {
+        width: 100vw;
+        margin-top: 2vh;
+    }
+    .textDiv span:nth-child(3) {
+        font-size: 12px;
+        font-weight: 500;
+        color: #65676bab;
+    }
 }

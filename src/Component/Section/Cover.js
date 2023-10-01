@@ -1,9 +1,11 @@
-import NavigationBar2 from "../NavigationBar2";
-
 const Cover = () => {
+  const handleCallMe = () => {
+    let phoneNumber = "+917843068183";
+    window.location.href = "tel:" + phoneNumber;
+  };
   return (
     <>
-      <div className="coverPage">
+      <div id="cover" className="coverPage">
         <div className="coverImg">
           <img src="./images/cover.jpg" alt="coverImage" />
         </div>
@@ -16,8 +18,10 @@ const Cover = () => {
             <span className="profileSubText">Front end Developer</span>
           </div>
           <div className="coverBtn">
-            <button>Add me in contacts</button>
-            <button>Call me</button>
+            <a href="./my-contact.vcf" download="shubhContact.vcf">
+              <button>Add me in contacts</button>
+            </a>
+            <button onClick={handleCallMe}>Call me</button>
           </div>
         </div>
       </div>

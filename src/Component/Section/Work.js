@@ -1,7 +1,7 @@
 const Work = () => {
   return (
     <>
-      <div className="workMainDiv">
+      <div id="work" className="workMainDiv">
         <div className="infoDiv">
           <h3>Career History</h3>
           <div className="introText">
