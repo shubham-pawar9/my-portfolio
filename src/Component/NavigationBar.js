@@ -35,6 +35,9 @@ const NavigationBar = () => {
     "website",
     "mobile",
     "career",
+    "contact",
+    "message",
+    "designed",
   ];
   const handleSuggestion = (searchTxt) => {
     return searchArray.filter((val) => val.includes(searchTxt));

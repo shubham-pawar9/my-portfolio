@@ -386,7 +386,85 @@ background-color: #f0f2f5;
 .suggestionList li:hover{
     color: #8c939d;
 }
-@media only screen and (max-width: 430px) and (max-height: 850px) and (orientation: portrait){
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: auto;
+    width: 75%;
+}
+.form-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+label {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.form input{
+    border: none;
+    border-bottom: 2px solid #0866ff;
+    padding: 5px;
+    color: #8c939d;
+    width: 100%;
+}
+.form input.submitBtn {
+    border: none;
+    background-color: #0866ff;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    width: 7em;
+}
+.form input:focus-visible {
+    outline: none;
+}
+
+#contact .socialDiv .introText .introduction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#contact .socialDiv .introText .introduction img {
+width: fit-content;
+}
+#contact .socialDiv .introText .textDiv {
+align-items: center;
+}
+#contact .socialDiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#contact .bottomTxt {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+#contact .bottomTxt span:nth-child(1) {
+    font-weight: 300;
+}
+#contact .bottomTxt span:nth-child(2) {
+    font-weight: 700;
+}
+#contact .introText h2 {
+    font-size: 5em;
+    color: #8c939d;
+}
+#contact .introText h3 {
+    text-shadow: 1px 1px 2px #000;
+    color: #fff;
+    font-size: 1.4em;
+}
+#contact .introText {
+    display: flex;
+    align-items: center;
+}
+@media only screen and (max-width: 650px) and (max-height: 900px) and (orientation: portrait){
     .navBar {
         display: none;
     }
@@ -424,12 +502,13 @@ background-color: #f0f2f5;
         margin-left: 0;
     }
     .bottomNavBar {
-        height: 8vh;
+        height: 2.5em;
     }
     .bottomNavList {
         width: 100%;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     }
     .bottomLists {
         padding: 5px;
@@ -459,5 +538,48 @@ background-color: #f0f2f5;
         font-size: 12px;
         font-weight: 500;
         color: #65676bab;
+    }
+    #contact .bottomTxt {
+        margin: 55px 0 20px 0;
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media only screen and (min-width: 500px) and (max-width: 900px) and (orientation: landscape){
+    .navBar {
+        display: none;
+    }
+    .coverImg,.coverBottom,.homeMainDiv, .projectsMainDiv, .aboutMainDiv, .contactMainDiv, .workMainDiv {
+        width: 100%;
+    }
+    .infoDiv {
+        width: 58vw;
+    margin-right: 2vw;
+    margin-left: 2vw;
+    }
+    .socialDiv {
+        width: 36vw;
+    margin-right: 2vw;
+    overflow-y: auto;
+    overflow-x: hidden;
+    }
+    .introduction span {
+        word-break: break-all;
+    }
+    #contact .introText h2 {
+        font-size: 2em;
+    }
+    .profileImg {
+            height: 125px;
+            width: 125px;
+    }
+    .profileName {
+        font-size: 25px;
+    }
+    .coverBtn {
+        top: 0;
+    }
+    .bottomNavBar {
+        height: 4em;
     }
 }

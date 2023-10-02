@@ -41,7 +41,14 @@ const NavigationBar2 = () => {
               Projects
             </li>
           </a>
-          <li className="bottomLists">Take a Tour</li>
+          <a href="#contact">
+            <li
+              className="bottomLists"
+              onClick={(e) => handleComponentSelect(e, "contact")}
+            >
+              Contact
+            </li>
+          </a>
         </ul>
       </div>
     </>
