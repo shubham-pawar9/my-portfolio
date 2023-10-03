@@ -80,6 +80,7 @@ background-color: #f0f2f5;
 .centerSide {
     display: flex;
     align-items: center;
+    display: none;
 }
 .centerSide ul {
     display: flex;
@@ -581,5 +582,60 @@ align-items: center;
     }
     .bottomNavBar {
         height: 4em;
+    }
+}
+@media only screen and (min-width: 1919px) and (min-height: 950px) and (orientation: landscape){
+    .profileImg {
+        align-items: center;
+        background-color: #fff;
+        border-radius: 50%;
+        display: flex;
+        height: 275px;
+        justify-content: center;
+        left: 63px;
+        position: relative;
+        top: -123px;
+        width: 275px;
+    }
+    .searchBar {
+        font-size: 20px;
+    }
+    .profileName {
+        font-size: 55px;
+        line-height: 1.4em;
+    }
+    .profileSubText {
+        color: #65676b;
+        font-size: 20px;
+    }
+    .coverBtn button {
+        font-size: 20px;
+    }
+    .bottomLists {
+        font-size: 25px;
+    }
+    .infoDiv h3 {
+        font-size: 28px;
+    }
+    .introduction span {
+        font-size: 24px;
+    }
+    .workMainDiv .socialDiv .textDiv span:nth-child(2) {
+        font-size: 20px;
+    }
+    .textDiv span:nth-child(3) {
+        font-size: 18px;
+    }
+    .form label {
+        font-size: 20px;
+    }
+    .form input {
+        font-size: 22px;
+    }
+    #contact .introText h2 {
+        font-size: 8em;
+    }
+    #contact .bottomTxt span:nth-child(2) {
+        font-size: 20px;
     }
 }
