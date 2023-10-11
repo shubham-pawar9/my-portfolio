@@ -696,6 +696,9 @@ align-items: center;
         box-shadow: inset 0px -40px 0px 0px #0866ff;
         color: #fff;
     }
+    .postImg {
+        width: 100%;
+    }
 }
 @media only screen and (min-width: 500px) and (max-width: 900px) and (orientation: landscape){
     .navBar {
