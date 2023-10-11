@@ -14,21 +14,33 @@ const Blogs = ({ setBlogShow }) => {
   const fetchBlogAPI = () => {
     return new Promise(async (resolve, reject) => {
       try {
-        const res = await fetch(
-          "https://rest-api-product-production.up.railway.app/api/products"
-        );
-        const data = res.json();
+        // Use the CORS Anywhere proxy to bypass CORS
+        const proxyUrl = "https://cors-anywhere.herokuapp.com"; // Replace with your proxy URL
+        const apiUrl =
+          "https://rest-api-product-production.up.railway.app/api/products";
+
+        const headers = new Headers();
+        headers.append("Origin", "https://pshubham9.netlify.app"); // Replace with your React app's domain
+
+        const res = await fetch(`${proxyUrl}/${apiUrl}`, {
+          method: "GET",
+          headers: headers,
+        });
+
+        const data = await res.json();
         resolve(data);
       } catch (error) {
         reject(error);
       }
     });
   };
+
   useEffect(() => {
     fetchBlogAPI()
       .then((data) => setApiData(data))
       .catch((error) => console.log(error));
   });
+
   return (
     <>
       <div className="blogMain">
