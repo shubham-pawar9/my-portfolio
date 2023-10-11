@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-
+import blogData from "../../data.json";
 const Blogs = ({ setBlogShow }) => {
   const [apiData, setApiData] = useState([]);
   const buttonRef = useRef("");
@@ -11,36 +11,27 @@ const Blogs = ({ setBlogShow }) => {
   const handleCloseBlogWindow = () => {
     setBlogShow(false);
   };
-  const fetchBlogAPI = () => {
-    return new Promise(async (resolve, reject) => {
-      try {
-        // Use the CORS Anywhere proxy to bypass CORS
-        const proxyUrl = "https://cors-anywhere.herokuapp.com"; // Replace with your proxy URL
-        const apiUrl =
-          "https://rest-api-product-production.up.railway.app/api/products";
-
-        const headers = new Headers();
-        headers.append("Origin", "https://pshubham9.netlify.app"); // Replace with your React app's domain
-
-        const res = await fetch(`${proxyUrl}/${apiUrl}`, {
-          method: "GET",
-          headers: headers,
-        });
-
-        const data = await res.json();
-        resolve(data);
-      } catch (error) {
-        reject(error);
-      }
-    });
-  };
-
+  // const fetchBlogAPI = () => {
+  //   return new Promise(async (resolve, reject) => {
+  //     try {
+  //       const res = await fetch("data.json");
+  //       const data = res.json();
+  //       console.log(data);
+  //       resolve(data);
+  //     } catch (error) {
+  //       reject(error);
+  //     }
+  //   });
+  // };
+  // useEffect(() => {
+  //   fetchBlogAPI()
+  //     .then((data) => setApiData(data))
+  //     .catch((error) => console.log(error));
+  // });
   useEffect(() => {
-    fetchBlogAPI()
-      .then((data) => setApiData(data))
-      .catch((error) => console.log(error));
-  });
-
+    setApiData(blogData);
+    console.log(apiData);
+  }, []);
   return (
     <>
       <div className="blogMain">
@@ -74,8 +65,8 @@ const Blogs = ({ setBlogShow }) => {
             </ul>
           </nav>
           <div className="section">
-            {apiData.Products &&
-              apiData.Products.map((value, index) => {
+            {apiData &&
+              apiData.map((value, index) => {
                 return (
                   <div className="blogPost">
                     <img
