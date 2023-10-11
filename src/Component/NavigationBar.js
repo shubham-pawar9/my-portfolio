@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 
-const NavigationBar = () => {
+const NavigationBar = ({ contactInfo }) => {
   const [suggestionText, setSuggestionText] = useState([]);
   const [inputValue, setInputValue] = useState("");
+
   const handleMyWhatsapp = () => {
     let phoneNumber = "+917843068183";
 
@@ -79,6 +80,9 @@ const NavigationBar = () => {
       }, 2000);
     }
     console.log(item);
+  };
+  const handleNotification = () => {
+    console.log(contactInfo);
   };
   return (
     <>
@@ -159,6 +163,7 @@ const NavigationBar = () => {
           <img
             src={process.env.PUBLIC_URL + "/images/notification.png"}
             alt="notification"
+            onClick={handleNotification}
           />
           <img
             src={process.env.PUBLIC_URL + "/images/profile.jpg"}

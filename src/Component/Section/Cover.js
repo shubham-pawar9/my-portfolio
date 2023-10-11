@@ -1,7 +1,10 @@
-const Cover = () => {
+const Cover = ({ setBlogShow }) => {
   const handleCallMe = () => {
     let phoneNumber = "+917843068183";
     window.location.href = "tel:" + phoneNumber;
+  };
+  const handleBlogsShow = () => {
+    setBlogShow(true);
   };
   return (
     <>
@@ -24,9 +27,12 @@ const Cover = () => {
             <span className="profileSubText">Front end Developer</span>
           </div>
           <div className="coverBtn">
-            <a href="./my-contact.vcf" download="shubhContact.vcf">
+            {/* <a href="./my-contact.vcf" download="shubhContact.vcf">
               <button>Add me in contacts</button>
-            </a>
+            </a> */}
+            <button className="myBlogs" onClick={handleBlogsShow}>
+              My Blogs
+            </button>
             <button className="call" onClick={handleCallMe}>
               Call me
             </button>

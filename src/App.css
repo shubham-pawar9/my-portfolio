@@ -301,6 +301,7 @@ background-color: #f0f2f5;
     flex-direction: column;
     align-items: flex-start;
     margin-top: 15px;
+    overflow-y: auto;
 }
 .introduction {
     text-align: left;
@@ -465,6 +466,123 @@ align-items: center;
     display: flex;
     align-items: center;
 }
+.mainSection {
+    display: flex;
+    height: calc(100% - 50px);
+}
+.blogMain {
+    height: 100vh;
+}
+.navigationBar {
+    width: 0%;
+    transition: all 0.3s ease-out;
+}
+.section {
+    width: auto;
+    overflow: auto;
+    padding: 10px;
+    background: #f0f2f5;
+}
+.blogPost {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    background: #f0f2f5;
+    padding: 1em 3em;
+    margin: 1em 0;
+    box-shadow: 0px 4px 8px 0px #686a6e;
+}
+.blogPost span::selection, .blogPost li::selection{
+    background-color: #FDFF32;
+    color: #000;
+}
+.postImg {
+    width: 80%;
+    align-self: center;
+    margin: 0 0 20px 0;
+    box-shadow: 0px 9px 12px 1px #65676b91;
+}
+.postHeading {
+    font-size: 40px;
+}
+.postTextDiv {
+    padding: 15px 0;
+    border-bottom: 1px solid #65676b;
+}
+.postMainTextDiv {
+    margin: 10px 0;
+}
+.postMainTextDiv h2 {
+    margin-bottom: 10px;
+}
+.postMainTextDiv ol li {
+    margin: 10px 0;
+}
+.navigationBar li {
+    border-bottom: 1px solid #6b6d71;
+    width: max-content;
+    margin-left: 5px;
+    margin-top: 10px;
+    color: #0866ff;
+    font-weight: 600;
+    cursor: pointer;
+    min-width: 100px;
+    padding-left: 8px;
+    border-radius: 3px 3px 0 0;
+    transition: all 0.2s ease-in-out;
+}
+.navigationBar li:hover {
+    list-style-type: disc;
+    box-shadow: inset 0px -20px 0px 0px #0866ff;
+    color: #fff
+}
+.navigationBar li::marker {
+    color: #0866ff;
+}
+.navigationBar ul {
+    margin: 20px;
+    list-style-type: circle;
+}
+.headerBar {
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+.navBtn {
+    height: 100%;
+    border: none;
+    background: transparent;
+    padding: 7px;
+    cursor: pointer;
+}
+.burgerIcon {
+    height: 100%;
+}
+.blogCloseBtn {
+    border: none;
+    cursor: pointer;
+    align-self: center;
+    position: absolute;
+    right: 10px;
+    background: #0866ff;
+    padding: 10px 20px;
+    border-radius: 3px;
+    color: #fff;
+}
+.blogSearchBar {
+    height: 6vh;
+    width: 275px;
+    border: none;
+    background-color: #f0f2f5;
+    padding-left: 40px;
+    margin-left: 40px;
+}
+.blogSearchBar:focus-visible {
+    outline: none;
+    border-bottom: 1px solid #6b6d71;
+}
 @media only screen and (max-width: 650px) and (max-height: 900px) and (orientation: portrait){
     .navBar {
         display: none;
@@ -545,6 +663,39 @@ align-items: center;
         display: flex;
         flex-direction: column;
     }
+    .section {
+        padding: 0;
+    }
+    .blogPost {
+        padding: 1em 1.3em;
+        margin: 0;
+    }
+    .navBtn {
+        display: none;
+    }
+    .mainSection {
+        display: flex;
+        height: calc(100% - 50px);
+        flex-direction: column;
+    }
+    .navigationBar ul {
+        margin: 0px;
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100vw;
+    }
+    .navigationBar li {
+        min-width: min-content;
+        padding: 10px;
+        margin: 0 4px;
+    }
+    .navigationBar li:hover {
+        list-style-type: none;
+        box-shadow: inset 0px -40px 0px 0px #0866ff;
+        color: #fff;
+    }
 }
 @media only screen and (min-width: 500px) and (max-width: 900px) and (orientation: landscape){
     .navBar {
@@ -582,6 +733,27 @@ align-items: center;
     }
     .bottomNavBar {
         height: 4em;
+    }
+}
+@media only screen and (min-width: 901px) and (max-width: 1235px) and (orientation: landscape){
+    .profileImg {
+        height: 135px;
+        width: 135px;
+        left: 30px;
+        top: -65px;
+    }
+    .profileInfo {
+        left: -7px;
+    }
+    .profileName {
+        font-size: 25px;
+    }
+    .profileSubText {
+        font-size: 13px;
+    }
+    .coverBtn {
+       
+        top: -10px;
     }
 }
 @media only screen and (min-width: 1919px) and (min-height: 950px) and (orientation: landscape){

@@ -1,7 +1,8 @@
-const Contact = () => {
+const Contact = ({ setContactInfo }) => {
   function Submit(e) {
     const formEle = document.querySelector("form");
     const formDatab = new FormData(formEle);
+    setContactInfo(formDatab);
     fetch(
       "https://script.google.com/macros/s/AKfycbz-sRuhW2ae3eP57TvS5etL2cotkgfGmf41BwkslBYVqRExKz08LWcwm5z5LC0UGwZW/exec",
       {
