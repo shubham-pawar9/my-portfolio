@@ -240,7 +240,13 @@ const Projects = () => {
                   </a>
                 </span>
                 <span className="desktopOnlyText">Virtual Smart Watch</span>
-                <span>Technologies -</span>
+                <span>
+                  Technologies - React.js: The Visual Smart Watch is built using
+                  the React.js library. Using real time data of date and day.
+                  Also use stopwatch functionaliy and create both analog and
+                  digital dial UI. Create this app with a responsive to all
+                  devices.
+                </span>
               </div>
             </div>
           </div>
