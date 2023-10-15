@@ -1,11 +1,10 @@
-const Cover = ({ setBlogShow }) => {
+import { NavLink } from "react-router-dom";
+const Cover = () => {
   const handleCallMe = () => {
     let phoneNumber = "+917843068183";
     window.location.href = "tel:" + phoneNumber;
   };
-  const handleBlogsShow = () => {
-    setBlogShow(true);
-  };
+
   return (
     <>
       <div id="cover" className="coverPage profile allMainDiv">
@@ -30,9 +29,10 @@ const Cover = ({ setBlogShow }) => {
             {/* <a href="./my-contact.vcf" download="shubhContact.vcf">
               <button>Add me in contacts</button>
             </a> */}
-            <button className="myBlogs" onClick={handleBlogsShow}>
-              My Blogs
-            </button>
+            <NavLink to={`/my-blogs`}>
+              <button className="myBlogs">My Blogs</button>
+            </NavLink>
+
             <button className="call" onClick={handleCallMe}>
               Call me
             </button>

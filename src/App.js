@@ -11,24 +11,31 @@ import NavigationBar2 from "./Component/NavigationBar2";
 import Work from "./Component/Section/Work";
 import { useState } from "react";
 import Blogs from "./Component/Section/Blogs";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
   const [contactInfo, setContactInfo] = useState("");
-  const [blogShow, setBlogShow] = useState(false);
   return (
     <div className="App">
-      {!blogShow && (
-        <>
-          <NavigationBar contactInfo={contactInfo} />
-          <Cover setBlogShow={setBlogShow} />
-          <NavigationBar2 />
-          <About />
-          <Work />
-          <Projects />
-          <Contact setContactInfo={setContactInfo} />
-        </>
-      )}
-      {blogShow && <Blogs setBlogShow={setBlogShow} />}
+      <Router>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <NavigationBar contactInfo={contactInfo} />
+                <Cover />
+                <NavigationBar2 />
+                <About />
+                <Work />
+                <Projects />
+                <Contact setContactInfo={setContactInfo} />
+              </>
+            }
+          />
+          <Route path="/my-blogs" element={<Blogs />} />
+        </Routes>
+      </Router>
     </div>
   );
 }

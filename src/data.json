@@ -2,16 +2,17 @@
     {
     "lang":"html",
     "heading": "Demystifying the HTML Boilerplate: Your Go-To Template for Web Development",
-    "shortDiscription": "When it comes to web development, having a solid foundation is crucial. The HTML boilerplate is that reliable foundation every web developer should be familiar with. In this article, we'll dive into what an HTML boilerplate is and why it's an essential tool in your web development arsenal.",
+    "shortDiscription": "An HTML boilerplate is a standard template that we can use as a starting point for creating web pages. The purpose of an HTML boilerplate is to save time and effort by providing a foundation that can be customized to suit the specific needs of a project. It ensures that we do not have to start from scratch every time when create a new web page.",
     "mainDiscription": {
         "heading" : "Understanding the HTML Boilerplate",
         "details" : [
-            "At its core, the HTML boilerplate is a standardized template for creating HTML documents. It's essentially a skeleton structure that forms the basis of every web page you build. This template includes all the fundamental elements necessary for a valid HTML document. Let's break it down:",
-            "<html>: This tag signifies the beginning and end of your HTML document. Everything within your web page is enclosed within these opening and closing tags.",
-            "<head>: Inside the <head> section, you define metadata about your webpage, such as the title, character encoding, and links to external resources like stylesheets and scripts.",
-            "<title>: The <title> tag specifies the title of your webpage, which appears in the browser's title bar or tab.",
-            "<meta charset='UTF-8'>: This meta tag sets the character encoding for your webpage, ensuring that special characters and symbols display correctly.",
-            "<body>: The <body> section contains the content that is visible to users, including text, images, links, and more."
+            "At its core, the HTML boilerplate is a standardized template for creating HTML documents. It's essentially a skeleton structure that forms the basis of every web page we build. This template includes all the fundamental elements necessary for a valid HTML document. Let's break it down:",
+            "<!DOCTYPE html>: Specifies the HTML version being used.",
+            "<html>: The root element that encapsulates the entire HTML document.",
+            "<head>: Contains meta-information about the document, such as the page title, character set, and links to external resources like CSS and JavaScript files.",
+            "<title>:Defines the title of the HTML document, which appears in the browser's title bar or tab.",
+            "<meta>: Provides metadata about the HTML document, such as character encoding, viewport settings for responsive design, and descriptions for SEO.",
+            "<body>:  Encloses the content visible on the web page, including text, images, links, and other elements."
         ]
     },
     "src": "one"

@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import blogData from "../../data.json";
-const Blogs = ({ setBlogShow }) => {
+import { NavLink } from "react-router-dom";
+const Blogs = () => {
   const [apiData, setApiData] = useState([]);
   const buttonRef = useRef("");
   const handleNavClick = () => {
@@ -8,9 +9,7 @@ const Blogs = ({ setBlogShow }) => {
       ? (buttonRef.current.style.width = "0%")
       : (buttonRef.current.style.width = "25%");
   };
-  const handleCloseBlogWindow = () => {
-    setBlogShow(false);
-  };
+
   // const fetchBlogAPI = () => {
   //   return new Promise(async (resolve, reject) => {
   //     try {
@@ -48,9 +47,9 @@ const Blogs = ({ setBlogShow }) => {
             type="search"
             placeholder="search here"
           />
-          <button className="blogCloseBtn" onClick={handleCloseBlogWindow}>
-            Back to HOME
-          </button>
+          <NavLink to={"/"}>
+            <button className="blogCloseBtn">Back to HOME</button>
+          </NavLink>
         </header>
         <div className="mainSection">
           <nav className="navigationBar" ref={buttonRef}>
