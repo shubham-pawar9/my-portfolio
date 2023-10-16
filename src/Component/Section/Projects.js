@@ -1,11 +1,18 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 const Projects = () => {
+  const loaderRef = useRef();
   const [projectUrl, setProjectUrl] = useState(
     "https://shubham-pawar9.github.io/ai-tool-shunu/"
   );
   const handleUrlClick = (url) => {
-    setProjectUrl(url);
+    loaderRef.current.style.display = "block";
+    setTimeout(() => {
+      loaderRef.current.style.display = "none";
+    }, 2000);
+    setTimeout(() => {
+      setProjectUrl(url);
+    }, 500);
   };
   return (
     <>
@@ -19,6 +26,21 @@ const Projects = () => {
             frameBorder="0"
             allowFullScreen
           ></iframe>
+          <div className="fullScreen">
+            <a href={projectUrl} target="_blank">
+              <img
+                src={process.env.PUBLIC_URL + "/images/expand.png"}
+                alt="fullScreen"
+                title="Explore in new Full Screen Window"
+              />
+            </a>
+          </div>
+          <div className="projectLoadingDiv" ref={loaderRef}>
+            <div className="one loaderBox"></div>
+            <div className="two loaderBox"></div>
+            <div className="three loaderBox"></div>
+            <div className="four loaderBox"></div>
+          </div>
         </div>
         <div className="socialDiv">
           <h3 className="projects github">
