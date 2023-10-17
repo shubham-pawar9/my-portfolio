@@ -30,7 +30,9 @@ const Cover = () => {
               <button>Add me in contacts</button>
             </a> */}
             <NavLink to={`/my-blogs`}>
-              <button className="myBlogs">My Blogs</button>
+              <button className="myBlogs" style={{ display: "none" }}>
+                My Blogs
+              </button>
             </NavLink>
 
             <button className="call" onClick={handleCallMe}>
