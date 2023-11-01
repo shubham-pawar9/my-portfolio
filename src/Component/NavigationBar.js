@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const NavigationBar = ({ contactInfo }) => {
+const NavigationBar = ({ dimensions }) => {
   const [suggestionText, setSuggestionText] = useState([]);
   const [inputValue, setInputValue] = useState("");
 
@@ -81,8 +81,34 @@ const NavigationBar = ({ contactInfo }) => {
     }
     console.log(item);
   };
-  const handleNotification = () => {
-    console.log(contactInfo);
+  const darkModeArr = [
+    "App",
+    "coverPage",
+    "navBar",
+    "infoDiv",
+    "socialDiv",
+    "bottomNavBar",
+    "searchBar",
+    "suggestionList",
+  ];
+  const handleDarkMode = (e) => {
+    darkModeArr.map((item) => {
+      var items = document.querySelectorAll(`.${item}`);
+      items.forEach((val) => {
+        if (val.classList.contains("dark")) {
+          val.classList.remove("dark");
+          e.target.src = "/images/dark.png";
+        } else {
+          val.classList.add("dark");
+          e.target.src = "/images/light.png";
+        }
+
+        console.log(val.classList.contains("dark"));
+      });
+    });
+  };
+  const handleMobBurger = () => {
+    document.querySelector(".bottomNavBar").style.display = "flex";
   };
   return (
     <>
@@ -119,40 +145,6 @@ const NavigationBar = ({ contactInfo }) => {
             </ul>
           </div>
         </div>
-        <div className="centerSide">
-          <ul>
-            <li>
-              <img
-                src={process.env.PUBLIC_URL + "/images/home.png"}
-                alt="Home"
-              />
-            </li>
-            <li>
-              <img
-                src={process.env.PUBLIC_URL + "/images/project.png"}
-                alt="Projects"
-              />
-            </li>
-            <li>
-              <img
-                src={process.env.PUBLIC_URL + "/images/about.png"}
-                alt="About"
-              />
-            </li>
-            <li>
-              <img
-                src={process.env.PUBLIC_URL + "/images/contact.png"}
-                alt="Contact"
-              />
-            </li>
-            <li>
-              <img
-                src={process.env.PUBLIC_URL + "/images/menu.png"}
-                alt="Menu"
-              />
-            </li>
-          </ul>
-        </div>
         <div className="rightSide">
           <img
             className="whatsapp"
@@ -161,13 +153,19 @@ const NavigationBar = ({ contactInfo }) => {
             onClick={handleMyWhatsapp}
           />
           <img
-            src={process.env.PUBLIC_URL + "/images/notification.png"}
+            src={process.env.PUBLIC_URL + "/images/dark.png"}
             alt="notification"
-            onClick={handleNotification}
+            onClick={(e) => handleDarkMode(e)}
           />
           <img
-            src={process.env.PUBLIC_URL + "/images/profile.jpg"}
+            src={
+              dimensions.height < 900 && dimensions.width < 800
+                ? process.env.PUBLIC_URL + "/images/menu.png"
+                : process.env.PUBLIC_URL + "/images/profile.jpg"
+            }
             alt="account"
+            className="mobBurger"
+            onClick={handleMobBurger}
           />
         </div>
       </div>

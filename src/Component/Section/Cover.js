@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import NavigationBar from "../NavigationBar";
 const Cover = () => {
   const handleCallMe = () => {
     let phoneNumber = "+917843068183";

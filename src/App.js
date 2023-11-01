@@ -12,9 +12,29 @@ import Work from "./Component/Section/Work";
 import { useState } from "react";
 import Blogs from "./Component/Section/Blogs";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { useEffect } from "react";
 
 function App() {
   const [contactInfo, setContactInfo] = useState("");
+  const [mobState, setMobState] = useState(
+    window.innerWidth < 650 && window.innerHeight < 900
+  );
+  const [dimensions, setDimensions] = useState({
+    height: window.innerHeight,
+    width: window.innerWidth,
+  });
+  useEffect(() => {
+    function handleResize() {
+      setDimensions({
+        height: window.innerHeight,
+        width: window.innerWidth,
+      });
+    }
+    window.addEventListener("resize", handleResize);
+    return (_) => {
+      window.removeEventListener("resize", handleResize);
+    };
+  });
   return (
     <div className="App">
       <Router>
@@ -23,9 +43,9 @@ function App() {
             path="/"
             element={
               <>
-                <NavigationBar contactInfo={contactInfo} />
+                <NavigationBar dimensions={dimensions} />
                 <Cover />
-                <NavigationBar2 />
+                <NavigationBar2 dimensions={dimensions} />
                 <About />
                 <Work />
                 <Projects />
