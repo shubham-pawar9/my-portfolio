@@ -76,6 +76,41 @@ const Projects = () => {
                 </span>
               </div>
             </div>
+
+            <div className="introduction">
+              <img
+                src={process.env.PUBLIC_URL + "/images/shopping-cart.png"}
+                alt="icon"
+              />
+              <div
+                className="textDiv"
+                onClick={() =>
+                  handleUrlClick(
+                    "https://shubham-pawar9.github.io/shopping-cart/"
+                  )
+                }
+              >
+                <span className="mobOnlyText">
+                  <a
+                    href="https://shubham-pawar9.github.io/shopping-cart/"
+                    target="_blank"
+                  >
+                    Shopping Cart
+                  </a>
+                </span>
+                <span className="desktopOnlyText">Shopping Cart</span>
+                <span>
+                  Technologies - React.js: This is a shopping cart application
+                  built using ReactJS. It serves as a furniture shopping
+                  website, offering a wide array of furniture options such as
+                  beds, sofas, wardrobes, and more. To enhance the user
+                  experience, the app also includes a 'Sort' and 'Filter'
+                  feature, enabling users to efficiently organize and filter
+                  furniture items based on their type and price range.
+                </span>
+              </div>
+            </div>
+
             <div className="introduction">
               <img
                 src={process.env.PUBLIC_URL + "/images/elevator.png"}
