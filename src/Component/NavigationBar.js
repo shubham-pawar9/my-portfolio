@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const NavigationBar = ({ dimensions }) => {
+const NavigationBar = ({ dimensions, setDarkMode }) => {
   const [suggestionText, setSuggestionText] = useState([]);
   const [inputValue, setInputValue] = useState("");
 
@@ -90,6 +90,8 @@ const NavigationBar = ({ dimensions }) => {
     "bottomNavBar",
     "searchBar",
     "suggestionList",
+    "call",
+    "cv-show",
   ];
   const handleDarkMode = (e) => {
     darkModeArr.map((item) => {
@@ -97,12 +99,13 @@ const NavigationBar = ({ dimensions }) => {
       items.forEach((val) => {
         if (val.classList.contains("dark")) {
           val.classList.remove("dark");
+          setDarkMode(false);
           e.target.src = "/images/dark.png";
         } else {
           val.classList.add("dark");
+          setDarkMode(true);
           e.target.src = "/images/light.png";
         }
-
         console.log(val.classList.contains("dark"));
       });
     });

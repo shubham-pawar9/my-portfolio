@@ -277,7 +277,7 @@ const Projects = () => {
             </div>
             <div className="introduction">
               <img
-                src={process.env.PUBLIC_URL + "/images/lenovo.png"}
+                src={process.env.PUBLIC_URL + "/images/smart-watch.png"}
                 alt="icon"
               />
               <div

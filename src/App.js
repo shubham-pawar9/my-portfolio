@@ -23,6 +23,11 @@ function App() {
     height: window.innerHeight,
     width: window.innerWidth,
   });
+  const [showCV, setShowCV] = useState(false);
+  const [darkMode, setDarkMode] = useState(false);
+  const handleShowCV = () => {
+    setShowCV(true);
+  };
   useEffect(() => {
     function handleResize() {
       setDimensions({
@@ -37,25 +42,51 @@ function App() {
   });
   return (
     <div className="App">
-      <Router>
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <>
-                <NavigationBar dimensions={dimensions} />
-                <Cover />
-                <NavigationBar2 dimensions={dimensions} />
-                <About />
-                <Work />
-                <Projects />
-                <Contact setContactInfo={setContactInfo} />
-              </>
-            }
-          />
-          <Route path="/my-blogs" element={<Blogs />} />
-        </Routes>
-      </Router>
+      {!showCV && (
+        <Router>
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <>
+                  <NavigationBar
+                    dimensions={dimensions}
+                    setDarkMode={setDarkMode}
+                  />
+                  <Cover handleShowCV={handleShowCV} />
+                  <NavigationBar2 dimensions={dimensions} darkMode={darkMode} />
+                  <About />
+                  <Work />
+                  <Projects />
+                  <Contact setContactInfo={setContactInfo} />
+                </>
+              }
+            />
+            <Route path="/my-blogs" element={<Blogs />} />
+          </Routes>
+        </Router>
+      )}
+      {showCV && (
+        <div className="cv-container">
+          <button
+            className="cv-close"
+            onClick={() => setShowCV(false)}
+            title="close pdf mode"
+          >
+            <img
+              src={process.env.PUBLIC_URL + "/images/close.png"}
+              alt="close pdf view"
+            />
+          </button>
+          <iframe
+            title="CV"
+            src={process.env.PUBLIC_URL + "/cv/shubham-pawar.pdf"}
+            width="100%"
+            height="600"
+            style={{ border: "none" }}
+          ></iframe>
+        </div>
+      )}
     </div>
   );
 }
