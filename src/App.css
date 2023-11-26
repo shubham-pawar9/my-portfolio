@@ -898,6 +898,7 @@ align-items: center;
     justify-content: center;
     align-items: center;
     height: 100%;
+    z-index: 0;
     }
     .bottomLists {
         padding: 2vh 0;
@@ -917,6 +918,7 @@ align-items: center;
         background: transparent;
         border: none;
         cursor: pointer;
+        z-index: 1;
     }
     .closeMenu img {
         height: 100%;
