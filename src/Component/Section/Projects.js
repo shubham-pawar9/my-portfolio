@@ -113,6 +113,38 @@ const Projects = () => {
 
             <div className="introduction">
               <img
+                src={process.env.PUBLIC_URL + "/images/memory.png"}
+                alt="icon"
+              />
+              <div
+                className="textDiv"
+                onClick={() =>
+                  handleUrlClick(
+                    "https://shubham-pawar9.github.io/memory-game/"
+                  )
+                }
+              >
+                <span className="mobOnlyText">
+                  <a
+                    href="https://shubham-pawar9.github.io/memory-game/"
+                    target="_blank"
+                  >
+                    Memory Game
+                  </a>
+                </span>
+                <span className="desktopOnlyText">Memory Game</span>
+                <span>
+                  Technologies - React.js: This is a simple memory game
+                  application built using ReactJS. In this I created a memory
+                  game Ui with pure css and update logics in javascript for a
+                  memory game. The UI is a pure responsive and its work for
+                  touch devices as well.
+                </span>
+              </div>
+            </div>
+
+            <div className="introduction">
+              <img
                 src={process.env.PUBLIC_URL + "/images/elevator.png"}
                 alt="icon"
               />
