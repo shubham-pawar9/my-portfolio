@@ -47,7 +47,7 @@ const NavigationBar2 = ({ dimensions, darkMode }) => {
   }, []);
 
   useEffect(() => {
-    console.log(isSticky);
+    // console.log(isSticky);
   }, [isSticky]);
   const scrollToTop = () => {
     window.scrollTo({
