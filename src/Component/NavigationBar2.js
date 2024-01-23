@@ -19,14 +19,16 @@ const NavigationBar2 = ({ dimensions, darkMode }) => {
   const handleMenuStatus = () => {
     if (document.querySelector(".bottomNavBar"))
       document.querySelector(".bottomNavBar").style.display = "none";
+
+    if (dimensions.width > 800 && dimensions.height < dimensions.width) {
+      if (document.querySelector(".bottomNavBar"))
+        document.querySelector(".bottomNavBar").style.display = "flex";
+    } else if (dimensions.height < 900 && dimensions.width < 800) {
+      if (document.querySelector(".bottomNavBar"))
+        document.querySelector(".bottomNavBar").style.display = "none";
+    }
   };
-  if (dimensions.width > 800 && dimensions.height < dimensions.width) {
-    if (document.querySelector(".bottomNavBar"))
-      document.querySelector(".bottomNavBar").style.display = "flex";
-  } else if (dimensions.height < 900 && dimensions.width < 800) {
-    if (document.querySelector(".bottomNavBar"))
-      document.querySelector(".bottomNavBar").style.display = "none";
-  }
+
   useEffect(() => {
     const handleScroll = () => {
       if (

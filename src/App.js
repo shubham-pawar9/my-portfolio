@@ -28,6 +28,7 @@ function App() {
   const handleShowCV = () => {
     setShowCV(true);
   };
+  console.log(darkMode);
   useEffect(() => {
     function handleResize() {
       setDimensions({
@@ -70,7 +71,10 @@ function App() {
         <div className="cv-container">
           <button
             className="cv-close"
-            onClick={() => setShowCV(false)}
+            onClick={() => {
+              darkMode ? setDarkMode(true) : setDarkMode(false);
+              setShowCV(false);
+            }}
             title="close pdf mode"
           >
             <img

@@ -214,7 +214,7 @@ user-select: none;
     justify-content: center;
 }
 .coverBtn button img {
-    height: 100%;
+    height: 2.4rem;
 }
 
 .homeMainDiv, .projectsMainDiv, .aboutMainDiv, .contactMainDiv, .workMainDiv {
@@ -1068,14 +1068,17 @@ align-items: center;
     }
     .coverBtn button {
         margin: 5px 0;
-        height: 2.4rem;
+        height: 1.8rem;
         /* padding: 6px 10px; */
         display: flex;
         justify-content: space-evenly;
     }
+    .coverBtn button img {
+        height: 1.4rem;
+    }
     
 }
-@media only screen and (min-width: 1919px) and (min-height: 950px) and (orientation: landscape){
+@media only screen and (min-width: 1919px) and (min-height: 1020px) and (orientation: landscape){
     .profileName {
         line-height: 1.4em;
     }
@@ -1085,7 +1088,14 @@ align-items: center;
     .coverImg {
         height: 65vh !important;
     }
+   
 }
+@media only screen and (min-width: 1919px) and (min-height: 950px){
+    .coverBtn button img {
+        height: 1.4rem;
+    }
+}
+
 @media only screen and (min-width: 651px) and (max-width: 1024px)  and (min-height: 1000px) and (orientation: portrait){
     .search-container{
         display: none;

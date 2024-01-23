@@ -49,6 +49,74 @@ const Projects = () => {
           <div className="introText">
             <div className="introduction">
               <img
+                src={process.env.PUBLIC_URL + "/images/whatsapp.png"}
+                alt="icon"
+              />
+              <div
+                className="textDiv"
+                onClick={() =>
+                  handleUrlClick(
+                    "https://shubham-pawar9.github.io/whatsApp-chatting-app/"
+                  )
+                }
+              >
+                <span className="mobOnlyText">
+                  <a
+                    href="https://shubham-pawar9.github.io/whatsApp-chatting-app/"
+                    target="_blank"
+                  >
+                    Whatsapp Clone
+                  </a>
+                </span>
+                <span className="desktopOnlyText">WhatsApp Clone</span>
+                <span>
+                  Technologies - React.js, HTML, CSS <br></br>
+                  Embark on a journey of front-end excellence with my latest
+                  project—a meticulously crafted WhatsApp UI clone developed
+                  using React.js, HTML, and CSS. Immerse yourself in a visually
+                  stunning and fully functional application that mirrors the
+                  beloved features of WhatsApp while injecting some unique
+                  elements for an engaging user experience.
+                </span>
+              </div>
+            </div>
+            <div className="introduction">
+              <img
+                src={process.env.PUBLIC_URL + "/images/spotify.png"}
+                alt="icon"
+              />
+              <div
+                className="textDiv"
+                onClick={() =>
+                  handleUrlClick(
+                    "https://shubham-pawar9.github.io/spotify-api-app/"
+                  )
+                }
+              >
+                <span className="mobOnlyText">
+                  <a
+                    href="https://shubham-pawar9.github.io/spotify-api-app/"
+                    target="_blank"
+                  >
+                    Spotify App Clone
+                  </a>
+                </span>
+                <span className="desktopOnlyText">Spotify App Clone</span>
+                <span>
+                  Technologies - React.js, HTML, CSS
+                  <br></br>
+                  Dive into the rhythm of innovation with my React.js-powered
+                  Spotify UI clone. This project mirrors the sophistication of
+                  Spotify, seamlessly tapping into Spotify's Free API for a vast
+                  selection of songs, albums, and cover images. Navigate
+                  effortlessly through playback controls, curate a personalized
+                  Favourites List, and relive recent musical moments with a
+                  glance at the Recently Played list.
+                </span>
+              </div>
+            </div>
+            <div className="introduction">
+              <img
                 src={process.env.PUBLIC_URL + "/images/ai-tool.png"}
                 alt="icon"
               />

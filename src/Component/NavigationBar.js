@@ -162,7 +162,7 @@ const NavigationBar = ({ dimensions, setDarkMode }) => {
           />
           <img
             src={
-              dimensions.height < 900 && dimensions.width < 800
+              dimensions.height < 933 && dimensions.width < 800
                 ? process.env.PUBLIC_URL + "/images/menu.png"
                 : process.env.PUBLIC_URL + "/images/profile.jpg"
             }
