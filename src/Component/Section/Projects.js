@@ -1,9 +1,10 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const Projects = () => {
+  const [projectData, setProjectData] = useState([]);
   const loaderRef = useRef();
   const [projectUrl, setProjectUrl] = useState(
-    "https://shubham-pawar9.github.io/ai-tool-shunu/"
+    "https://shubham-pawar9.github.io/talk-dev-ChattingApp/"
   );
   const handleUrlClick = (url) => {
     loaderRef.current.style.display = "block";
@@ -14,6 +15,18 @@ const Projects = () => {
       setProjectUrl(url);
     }, 500);
   };
+  const fetchProject = () => {
+    try {
+      fetch("project.json")
+        .then((res) => res.json())
+        .then((res) => setProjectData(res));
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  useEffect(() => {
+    fetchProject();
+  }, []);
   return (
     <>
       <div id="project" className="projectsMainDiv allMainDiv">
@@ -47,365 +60,38 @@ const Projects = () => {
             Explore some of my latest projects on GitHub
           </h3>
           <div className="introText">
-            <div className="introduction">
-              <img
-                src={process.env.PUBLIC_URL + "/images/whatsapp.png"}
-                alt="icon"
-              />
-              <div
-                className="textDiv"
-                onClick={() =>
-                  handleUrlClick(
-                    "https://shubham-pawar9.github.io/whatsApp-chatting-app/"
-                  )
-                }
-              >
-                <span className="mobOnlyText">
-                  <a
-                    href="https://shubham-pawar9.github.io/whatsApp-chatting-app/"
-                    target="_blank"
-                  >
-                    Whatsapp Clone
-                  </a>
-                </span>
-                <span className="desktopOnlyText">WhatsApp Clone</span>
-                <span>
-                  Technologies - React.js, HTML, CSS <br></br>
-                  Embark on a journey of front-end excellence with my latest
-                  project—a meticulously crafted WhatsApp UI clone developed
-                  using React.js, HTML, and CSS. Immerse yourself in a visually
-                  stunning and fully functional application that mirrors the
-                  beloved features of WhatsApp while injecting some unique
-                  elements for an engaging user experience.
-                </span>
-              </div>
-            </div>
-            <div className="introduction">
-              <img
-                src={process.env.PUBLIC_URL + "/images/spotify.png"}
-                alt="icon"
-              />
-              <div
-                className="textDiv"
-                onClick={() =>
-                  handleUrlClick(
-                    "https://shubham-pawar9.github.io/spotify-api-app/"
-                  )
-                }
-              >
-                <span className="mobOnlyText">
-                  <a
-                    href="https://shubham-pawar9.github.io/spotify-api-app/"
-                    target="_blank"
-                  >
-                    Spotify App Clone
-                  </a>
-                </span>
-                <span className="desktopOnlyText">Spotify App Clone</span>
-                <span>
-                  Technologies - React.js, HTML, CSS
-                  <br></br>
-                  Dive into the rhythm of innovation with my React.js-powered
-                  Spotify UI clone. This project mirrors the sophistication of
-                  Spotify, seamlessly tapping into Spotify's Free API for a vast
-                  selection of songs, albums, and cover images. Navigate
-                  effortlessly through playback controls, curate a personalized
-                  Favourites List, and relive recent musical moments with a
-                  glance at the Recently Played list.
-                </span>
-              </div>
-            </div>
-            <div className="introduction">
-              <img
-                src={process.env.PUBLIC_URL + "/images/ai-tool.png"}
-                alt="icon"
-              />
-              <div
-                className="textDiv"
-                onClick={() =>
-                  handleUrlClick(
-                    "https://shubham-pawar9.github.io/ai-tool-shunu/"
-                  )
-                }
-              >
-                <span className="mobOnlyText">
-                  <a
-                    href="https://shubham-pawar9.github.io/ai-tool-shunu/"
-                    target="_blank"
-                  >
-                    AI-TOOL-(AI Assistant)
-                  </a>
-                </span>
-                <span className="desktopOnlyText">AI-TOOL-(AI Assistant)</span>
-                <span>
-                  Technologies - React.js: The entire AI assistant is built
-                  using the React.js library, ensuring a modular,
-                  component-based structure and dynamic UI updates.
-                </span>
-              </div>
-            </div>
-
-            <div className="introduction">
-              <img
-                src={process.env.PUBLIC_URL + "/images/shopping-cart.png"}
-                alt="icon"
-              />
-              <div
-                className="textDiv"
-                onClick={() =>
-                  handleUrlClick(
-                    "https://shubham-pawar9.github.io/shopping-cart/"
-                  )
-                }
-              >
-                <span className="mobOnlyText">
-                  <a
-                    href="https://shubham-pawar9.github.io/shopping-cart/"
-                    target="_blank"
-                  >
-                    Shopping Cart
-                  </a>
-                </span>
-                <span className="desktopOnlyText">Shopping Cart</span>
-                <span>
-                  Technologies - React.js: This is a shopping cart application
-                  built using ReactJS. It serves as a furniture shopping
-                  website, offering a wide array of furniture options such as
-                  beds, sofas, wardrobes, and more. To enhance the user
-                  experience, the app also includes a 'Sort' and 'Filter'
-                  feature, enabling users to efficiently organize and filter
-                  furniture items based on their type and price range.
-                </span>
-              </div>
-            </div>
-
-            <div className="introduction">
-              <img
-                src={process.env.PUBLIC_URL + "/images/memory.png"}
-                alt="icon"
-              />
-              <div
-                className="textDiv"
-                onClick={() =>
-                  handleUrlClick(
-                    "https://shubham-pawar9.github.io/memory-game/"
-                  )
-                }
-              >
-                <span className="mobOnlyText">
-                  <a
-                    href="https://shubham-pawar9.github.io/memory-game/"
-                    target="_blank"
-                  >
-                    Memory Game
-                  </a>
-                </span>
-                <span className="desktopOnlyText">Memory Game</span>
-                <span>
-                  Technologies - React.js: This is a simple memory game
-                  application built using ReactJS. In this I created a memory
-                  game Ui with pure css and update logics in javascript for a
-                  memory game. The UI is a pure responsive and its work for
-                  touch devices as well.
-                </span>
-              </div>
-            </div>
-
-            <div className="introduction">
-              <img
-                src={process.env.PUBLIC_URL + "/images/elevator.png"}
-                alt="icon"
-              />
-              <div
-                className="textDiv"
-                onClick={() =>
-                  handleUrlClick(
-                    "https://shubham-pawar9.github.io/elevator-2-lifts/"
-                  )
-                }
-              >
-                <span className="mobOnlyText">
-                  <a
-                    href="https://shubham-pawar9.github.io/elevator-2-lifts/"
-                    target="_blank"
-                  >
-                    Elevator 2 Lift Demo Template
-                  </a>
-                </span>
-                <span className="desktopOnlyText">
-                  Elevator 2 Lift Demo Template
-                </span>
-                <span>
-                  Technologies - HTML: Used to structure the content and
-                  elements of the web page. CSS: Employed for styling the user
-                  interface, including responsive design, animations, and
-                  interactive components. JavaScript: Implemented to manage
-                  elevator logic, floor selection, animation triggers, and sound
-                  effects.
-                </span>
-              </div>
-            </div>
-            <div className="introduction">
-              <img
-                src={process.env.PUBLIC_URL + "/images/table.png"}
-                alt="icon"
-              />
-              <div
-                className="textDiv"
-                onClick={() =>
-                  handleUrlClick(
-                    "https://shubham-pawar9.github.io/excel-to-table/"
-                  )
-                }
-              >
-                <span className="mobOnlyText">
-                  <a
-                    href="https://shubham-pawar9.github.io/excel-to-table/"
-                    target="_blank"
-                  >
-                    Excel to Table Conversion
-                  </a>
-                </span>
-                <span className="desktopOnlyText">
-                  Excel to Table Conversion
-                </span>
-                <span>
-                  Technologies - HTML and CSS: The project uses HTML and CSS for
-                  creating the web page layout and styling. JavaScript:
-                  JavaScript is employed for handling file uploads, Excel data
-                  processing, table creation, JSON conversion, and file saving.
-                  react-excel-renderer : ExcelRenderer used for reading and
-                  processing Excel files. JSON.stringify: This JavaScript method
-                  is used to convert JavaScript objects to JSON strings for
-                  saving.
-                </span>
-              </div>
-            </div>
-            <div className="introduction">
-              <img
-                src={process.env.PUBLIC_URL + "/images/news.png"}
-                alt="icon"
-              />
-              <div
-                className="textDiv"
-                onClick={() =>
-                  handleUrlClick(
-                    "https://shubham-pawar9.github.io/news-application/"
-                  )
-                }
-              >
-                <span className="mobOnlyText">
-                  <a
-                    href="https://shubham-pawar9.github.io/news-application/"
-                    target="_blank"
-                  >
-                    News Application UI Template
-                  </a>
-                </span>
-                <span className="desktopOnlyText">
-                  News Application UI Template
-                </span>
-                <span>
-                  Technologies - React.js: The entire News Application is built
-                  using the React.js library. use real time API to get the news
-                  data and fetch this as per country wise and display on the web
-                  page. Create this UI with a responsive to all devices.
-                </span>
-              </div>
-            </div>
-            <div className="introduction">
-              <img
-                src={process.env.PUBLIC_URL + "/images/list.png"}
-                alt="icon"
-              />
-              <div
-                className="textDiv"
-                onClick={() =>
-                  handleUrlClick(
-                    "https://shubham-pawar9.github.io/employee-task-list/"
-                  )
-                }
-              >
-                <span className="mobOnlyText">
-                  <a
-                    href="https://shubham-pawar9.github.io/employee-task-list/"
-                    target="_blank"
-                  >
-                    Employee Task List UI Template
-                  </a>
-                </span>
-                <span className="desktopOnlyText">
-                  Employee Task List UI Template
-                </span>
-                <span>
-                  Technologies - React.js: The frontend is built using React.js,
-                  ensuring a dynamic and interactive user interface. Node.js:
-                  The backend logic is implemented using Node.js to manage data
-                  storage and retrieval. JSON: JSON files are utilized for
-                  storing employee data and task details.
-                </span>
-              </div>
-            </div>
-            <div className="introduction">
-              <img
-                src={process.env.PUBLIC_URL + "/images/piano.png"}
-                alt="icon"
-              />
-              <div
-                className="textDiv"
-                onClick={() =>
-                  handleUrlClick("https://shubham-pawar9.github.io/piano/")
-                }
-              >
-                <span className="mobOnlyText">
-                  <a
-                    href="https://shubham-pawar9.github.io/piano/"
-                    target="_blank"
-                  >
-                    Piano
-                  </a>
-                </span>
-                <span className="desktopOnlyText">Piano</span>
-                <span>
-                  Technologies - HTML: Used for creating the basic structure and
-                  elements of the web page. CSS: Employed for styling the visual
-                  elements, layout, and animations of the piano keys.
-                  JavaScript: Implemented to handle user interactions, play
-                  sound effects, and manage the piano's behavior.
-                </span>
-              </div>
-            </div>
-            <div className="introduction">
-              <img
-                src={process.env.PUBLIC_URL + "/images/smart-watch.png"}
-                alt="icon"
-              />
-              <div
-                className="textDiv"
-                onClick={() =>
-                  handleUrlClick(
-                    "https://shubham-pawar9.github.io/virtual-smart-watch/"
-                  )
-                }
-              >
-                <span className="mobOnlyText">
-                  <a
-                    href="https://shubham-pawar9.github.io/virtual-smart-watch/"
-                    target="_blank"
-                  >
-                    Virtual Smart Watch
-                  </a>
-                </span>
-                <span className="desktopOnlyText">Virtual Smart Watch</span>
-                <span>
-                  Technologies - React.js: The Visual Smart Watch is built using
-                  the React.js library. Using real time data of date and day.
-                  Also use stopwatch functionaliy and create both analog and
-                  digital dial UI. Create this app with a responsive to all
-                  devices.
-                </span>
-              </div>
-            </div>
+            {projectData &&
+              projectData
+                .filter((item) => item.projectShow)
+                .map((item) => {
+                  return (
+                    <div key={item.id} className="introduction">
+                      <img
+                        src={process.env.PUBLIC_URL + `/images/${item.icon}`}
+                        alt="icon"
+                      />
+                      <div
+                        className="textDiv"
+                        onClick={() => handleUrlClick(item.link_url)}
+                      >
+                        <span className="mobOnlyText">
+                          <a href={item.link_url} target="_blank">
+                            {item.projectName}
+                          </a>
+                        </span>
+                        <span className="desktopOnlyText">
+                          {" "}
+                          {item.projectName}
+                        </span>
+                        <span>
+                          {item.technologies}
+                          <br></br>
+                          {item.description}
+                        </span>
+                      </div>
+                    </div>
+                  );
+                })}
           </div>
         </div>
       </div>

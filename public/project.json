@@ -1,0 +1,121 @@
+[
+    {
+        "id": 13,
+        "projectShow":true,
+        "projectName": "Road Traffic Signal Lights",
+        "technologies":"Technologies - React.js, Redux Tool kit, CSS",
+        "description": "The Road Traffic Signal Lights Changing project features four roads, each with its corresponding set of traffic signals, emulating real traffic intersections. To enhance realism, the signals display countdown timers for signal changes, providing users with a dynamic and immersive experience. Furthermore, the addition of moving cars on the roads adds to the authenticity of the simulation, with cars moving when the signals turn green.",
+        "link_url": "https://shubham-pawar9.github.io/road-traffic-signal-lights/",
+        "icon": "traffic-light.png"
+    },
+    {
+        "id": 1,
+        "projectShow":true,
+        "projectName": "Talk to Dev (Chatting App)",
+        "technologies":"Technologies - React.js, Redux Tool kit, CSS",
+        "description": "With a simple and intuitive user interface, the app features essential functionalities such as adding contacts and editing user details. One of its standout features is the inclusion of an auto bot reply system, enhancing the user experience by providing realistic interactions. With its clean UI and efficient functionalities, the Chatting App offers a perfect solution for users seeking a hassle-free chatting experience.",
+        "link_url": "https://shubham-pawar9.github.io/talk-dev-ChattingApp/",
+        "icon": "talk-dev.png"
+    },
+    {
+        "id": 5,
+        "projectShow":true,
+        "projectName": "Shopping Cart",
+        "technologies":"Technologies - React.js, CSS, JS",
+        "description": "This is a shopping cart application built using ReactJS. It serves as a furniture shopping website, offering a wide array of furniture options such as beds, sofas, wardrobes, and more. To enhance the user experience, the app also includes a 'Sort' and 'Filter' feature, enabling users to efficiently organize and filter furniture items based on their type and price range.",
+        "link_url": "https://shubham-pawar9.github.io/shopping-cart/",
+        "icon": "shopping-cart.png"
+    },
+    {
+        "id": 2,
+        "projectShow":true,
+        "projectName": "WhatsApp Clone",
+        "technologies":"Technologies - React.js, HTML, CSS.",
+        "description": "Embark on a journey of front-end excellence with my latest project—a meticulously crafted WhatsApp UI clone developed using React.js, HTML, and CSS. Immerse yourself in a visually stunning and fully functional application that mirrors the beloved features of WhatsApp while injecting some unique elements for an engaging user experience.",
+        "link_url": "https://shubham-pawar9.github.io/whatsApp-chatting-app/",
+        "icon": "whatsapp.png"
+    },
+    {
+        "id": 3,
+        "projectShow":true,
+        "projectName": "Spotify App Clone",
+        "technologies":"Technologies - React.js, HTML, CSS",
+        "description": "Dive into the rhythm of innovation with my React.js-powered Spotify UI clone. This project mirrors the sophistication of Spotify, seamlessly tapping into Spotify's Free API for a vast selection of songs, albums, and cover images. Navigate effortlessly through playback controls, curate a personalized Favourites List, and relive recent musical moments with a glance at the Recently Played list.",
+        "link_url": "https://shubham-pawar9.github.io/Spotify-music-app/",
+        "icon": "spotify.png"
+    },
+    {
+        "id": 6,
+        "projectShow":true,
+        "projectName": "Memory Game",
+        "technologies":"Technologies - React.js, CSS, JS",
+        "description": "This is a simple memory game application built using ReactJS. In this I created a memory game Ui with pure css and update logics in javascript for a memory game. The UI is a pure responsive and its work for touch devices as well.",
+        "link_url": "https://shubham-pawar9.github.io/memory-game/",
+        "icon": "memory.png"
+    },
+    {
+        "id": 4,
+        "projectShow":true,
+        "projectName": "AI-TOOL-(AI Assistant)",
+        "technologies":"Technologies - React.js, CSS",
+        "description": "The entire AI assistant is built using the React.js library, ensuring a modular, component-based structure and dynamic UI updates.",
+        "link_url": "https://shubham-pawar9.github.io/ai-tool-shunu/",
+        "icon": "ai-tool.png"
+    },
+
+   
+    {
+        "id": 7,
+        "projectShow":true,
+        "projectName": "Elevator 2 Lift Demo Template",
+        "technologies":"Technologies - HTML, CSS, JS",
+        "description": "HTML: Used to structure the content and elements of the web page. CSS: Employed for styling the user interface, including responsive design, animations, and interactive components. JavaScript: Implemented to manage elevator logic, floor selection, animation triggers, and sound effects.",
+        "link_url": "https://shubham-pawar9.github.io/elevator-2-lifts/",
+        "icon": "elevator.png"
+    },
+    {
+        "id": 8,
+        "projectShow":false,
+        "projectName": "Excel to Table Conversion",
+        "technologies":"Technologies - HTML, CSS, JS",
+        "description": "The project uses HTML and CSS for creating the web page layout and styling. JavaScript: JavaScript is employed for handling file uploads, Excel data processing, table creation, JSON conversion, and file saving. react-excel-renderer : ExcelRenderer used for reading and processing Excel files. JSON.stringify: This JavaScript method is used to convert JavaScript objects to JSON strings for saving.",
+        "link_url": "https://shubham-pawar9.github.io/excel-to-table/",
+        "icon": "table.png"
+    },
+    {
+        "id": 9,
+        "projectShow":true,
+        "projectName": "News Application UI Template",
+        "technologies":"Technologies - React JS, CSS",
+        "description": "The entire News Application is built using the React.js library. use real time API to get the news data and fetch this as per country wise and display on the webb page. Create this UI with a responsive to all devices.",
+        "link_url": "https://shubham-pawar9.github.io/news-application/",
+        "icon": "news.png"
+    },
+    {
+        "id": 10,
+        "projectShow":false,
+        "projectName": "Employee Task List UI Template",
+        "technologies":"Technologies - React JS, CSS",
+        "description": "The frontend is built using React.js, ensuring a dynamic and interactive user interface. Node.js: The backend logic is implemented using Node.js to manage data storage and retrieval. JSON: JSON files are utilized for storing employee data and task details.",
+        "link_url": "https://shubham-pawar9.github.io/employee-task-list/",
+        "icon": "list.png"
+    },
+    {
+        "id": 11,
+        "projectShow":true,
+        "projectName": "Piano",
+        "technologies":"Technologies - HTML, CSS, JS",
+        "description": "Used for creating the basic structure and elements of the web page. CSS: Employed for styling the visual elements, layout, and animations of the piano keys. JavaScript: Implemented to handle user interactions, play sound effects, and manage the piano's behavior.",
+        "link_url": "https://shubham-pawar9.github.io/piano/",
+        "icon": "piano.png"
+    },
+    {
+        "id": 12,
+        "projectShow":true,
+        "projectName": "Virtual Smart Watch",
+        "technologies":"Technologies - React js, CSS, JS",
+        "description": "The Visual Smart Watch is built using the React.js library. Using real time data of date and day. Also use stopwatch functionaliy and create both analog and digital dial UI. Create this app with a responsive to all devices.",
+        "link_url": "https://shubham-pawar9.github.io/virtual-smart-watch/",
+        "icon": "smart-watch.png"
+    }
+]
