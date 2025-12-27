@@ -53,8 +53,9 @@ function App() {
                   <NavigationBar
                     dimensions={dimensions}
                     setDarkMode={setDarkMode}
+                    darkMode={darkMode}
                   />
-                  <Cover handleShowCV={handleShowCV} />
+                  <Cover handleShowCV={handleShowCV} darkMode={darkMode} />
                   <NavigationBar2 dimensions={dimensions} darkMode={darkMode} />
                   <About />
                   <Work />

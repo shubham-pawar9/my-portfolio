@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const NavigationBar = ({ dimensions, setDarkMode }) => {
+const NavigationBar = ({ dimensions, setDarkMode, darkMode }) => {
   const [suggestionText, setSuggestionText] = useState([]);
   const [inputValue, setInputValue] = useState("");
 
@@ -160,16 +160,29 @@ const NavigationBar = ({ dimensions, setDarkMode }) => {
             alt="notification"
             onClick={(e) => handleDarkMode(e)}
           />
-          <img
-            src={
-              dimensions.height < 933 && dimensions.width < 800
-                ? process.env.PUBLIC_URL + "/images/menu.png"
-                : process.env.PUBLIC_URL + "/images/profile.jpg"
-            }
-            alt="account"
-            className="mobBurger"
-            onClick={handleMobBurger}
-          />
+          {darkMode ? (
+            <img
+              src={
+                dimensions.height < 933 && dimensions.width < 800
+                  ? process.env.PUBLIC_URL + "/images/menu.png"
+                  : process.env.PUBLIC_URL + "/images/profile-dark.png"
+              }
+              alt="account"
+              className="mobBurger"
+              onClick={handleMobBurger}
+            />
+          ) : (
+            <img
+              src={
+                dimensions.height < 933 && dimensions.width < 800
+                  ? process.env.PUBLIC_URL + "/images/menu.png"
+                  : process.env.PUBLIC_URL + "/images/profile-light.png"
+              }
+              alt="account"
+              className="mobBurger"
+              onClick={handleMobBurger}
+            />
+          )}
         </div>
       </div>
     </>

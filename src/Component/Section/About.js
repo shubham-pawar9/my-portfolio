@@ -12,12 +12,29 @@ const About = () => {
               />
               <div className="textDiv">
                 <span className="company post work">
+                  React JS Developer at{" "}
+                  <a href="https://prometteursolutions.com/" target="_blank">
+                    Prometteur Solutions
+                  </a>
+                </span>
+                <span>April 03, 2024 - Present · Pune, Maharashtra</span>
+              </div>
+            </div>
+            <div className="introduction">
+              <img
+                src={process.env.PUBLIC_URL + "/images/work.png"}
+                alt="icon"
+              />
+              <div className="textDiv">
+                <span className="company post work">
                   Web Application Developer at{" "}
                   <a href="https://www.hmxmedia.com/" target="_blank">
                     HMX Media
                   </a>
                 </span>
-                <span>December 21, 2020 - Present · Pune, Maharashtra</span>
+                <span>
+                  December 21, 2020 - March 15, 2024 · Pune, Maharashtra
+                </span>
               </div>
             </div>
             <div className="introduction">
@@ -87,7 +104,7 @@ const About = () => {
         <div className="socialDiv">
           <h3>Website And Social Links</h3>
           <div className="introText">
-            <div className="introduction">
+            {/* <div className="introduction">
               <img
                 src={process.env.PUBLIC_URL + "/images/link.png"}
                 alt="icon"
@@ -100,7 +117,7 @@ const About = () => {
                 </span>
                 <span className="website">Website</span>
               </div>
-            </div>
+            </div> */}
             <div className="introduction">
               <img
                 src={process.env.PUBLIC_URL + "/images/instagram.png"}

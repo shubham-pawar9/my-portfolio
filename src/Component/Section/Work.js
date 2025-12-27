@@ -8,34 +8,53 @@ const Work = () => {
             <div className="introduction">
               <div className="textDiv">
                 <span>
-                  <h3>HMX Media Pvt Ltd</h3>
-                  <h4>Front End Developer</h4>
+                  <h3>Prometteur Solutions Pvt Ltd</h3>
+                  <h4>React JS Developer</h4>
                 </span>
-                <span>December 21, 2020 – Present</span>
+                <span>April 03, 2024 – Present</span>
               </div>
             </div>
             <div className="introduction">
               <div className="textDiv">
                 <span>
-                  Joined HMX Media in December 2020 as a Front-End Developer,
-                  contributing to the core Web team.<br></br>• Proficiently
-                  worked with a range of technologies including HTML, CSS,
-                  JavaScript, jQuery, Bootstrap, AJAX, JSON, and React JS.
-                  <br></br>• Utilized Git for effective code collaboration,
-                  streamlining the development process among programmers.
-                  <br></br>• Took charge of multiple projects from their
-                  inception, displaying adaptability in handling projects from
-                  scratch.<br></br>• Thrived in a dynamic, small-scale company
-                  environment, gaining valuable insights into understanding
-                  business requirements right from the early stages of my
-                  career.<br></br>• Drove project count incrementally by
-                  consistently delivering projects on schedule and maintaining
-                  high quality.
-                  <br></br>• Adeptly build reusable components that have
-                  cross-project and cross-application utility.<br></br>• Employ
-                  cutting-edge technologies including WebGl, WebAPIs, ReactJS,
-                  and JavaScript to craft interactive and responsive
-                  applications.
+                  • Working as a React JS Developer, building scalable and
+                  user-friendly web applications.<br></br>• Hands-on experience
+                  with React JS, TypeScript, Next.js, and modern UI libraries
+                  like Material UI, Ant Design, and Bootstrap.<br></br>•
+                  Integrated REST APIs using JavaScript and tested endpoints
+                  with Postman.<br></br>• Familiar with AWS services and basic
+                  database concepts for application integration.<br></br>•
+                  Focused on performance optimization, reusable components, and
+                  clean, maintainable code.
+                </span>
+              </div>
+            </div>
+          </div>
+          <div className="introText">
+            <div className="introduction">
+              <div className="textDiv">
+                <span>
+                  <h3>HMX Media Pvt Ltd</h3>
+                  <h4>Front End Developer</h4>
+                </span>
+                <span>December 21, 2020 – March 15, 2024</span>
+              </div>
+            </div>
+            <div className="introduction">
+              <div className="textDiv">
+                <span>
+                  • Built responsive and user-friendly web applications using
+                  HTML, CSS, JavaScript, jQuery, Bootstrap, AJAX, JSON, and
+                  React JS.<br></br>• Collaborated with team members using Git
+                  for version control, ensuring efficient code management and
+                  deployment.<br></br>• Handled multiple projects from scratch,
+                  from requirement gathering to final delivery.<br></br>• Worked
+                  closely with stakeholders to understand business requirements
+                  in a fast-paced startup environment.<br></br>• Delivered
+                  high-quality projects on time, contributing to consistent
+                  project success and client satisfaction.<br></br>• Designed
+                  and developed reusable UI components to improve development
+                  efficiency across projects.<br></br>
                 </span>
               </div>
             </div>

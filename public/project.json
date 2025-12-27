@@ -1,5 +1,14 @@
 [
     {
+        "id": 14,
+        "projectShow":true,
+        "projectName": "Expence Tracker",
+        "technologies":"Technologies - Next.js, Material UI, ",
+        "description": "A user-friendly expense tracking web application that helps users manage their finances efficiently. Users can add daily expenses, track and analyze spending through monthly and yearly dashboards, and manage fixed expenses that automatically apply to every month with full edit functionality. The app also allows users to add and update monthly income, providing a clear overview of income versus expenses for better financial planning.",
+        "link_url": "https://my-expense-tracker-orpin.vercel.app/",
+        "icon": "expence-tracker.png"
+    },
+    {
         "id": 13,
         "projectShow":true,
         "projectName": "Road Traffic Signal Lights",

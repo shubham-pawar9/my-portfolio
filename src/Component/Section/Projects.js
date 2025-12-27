@@ -4,7 +4,7 @@ const Projects = () => {
   const [projectData, setProjectData] = useState([]);
   const loaderRef = useRef();
   const [projectUrl, setProjectUrl] = useState(
-    "https://shubham-pawar9.github.io/talk-dev-ChattingApp/"
+    "https://shubham-pawar9.github.io/memory-game/"
   );
   const handleUrlClick = (url) => {
     loaderRef.current.style.display = "block";

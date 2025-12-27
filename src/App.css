@@ -118,8 +118,10 @@ user-select: none;
 }
 .rightSide img:nth-child(3) {
     height: 8vh;
-    width: 8vh;
+    width: 5vh;
     object-fit: cover;
+    border-radius: unset;
+    background: transparent;
 }
 .navBar img {
     height: 8vh;
@@ -151,20 +153,20 @@ user-select: none;
     justify-content: space-between;
 }
 .profileImg {
-    height: 30vh;
-    width: 30vh;
-    border-radius: 50%;
+    height: 0vh;
+    width: 50vh;
+    /* border-radius: 50%; */
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     left: 7vh;
     top: -12vh;
-    background-color: #fff;
+    /* background-color: #fff; */
 }
 .profileImg img {
-    height: 95%;
-    border-radius: 50%;
+    /* height: 95%; */
+    /* border-radius: 50%; */
     width: 95%;
     object-fit: cover;
 }
@@ -315,7 +317,7 @@ user-select: none;
     flex-direction: column;
     align-items: flex-start;
     margin-top: 15px;
-    overflow-y: auto;
+    /* overflow-y: auto; */
     width: 100%;
 }
 .introduction {
@@ -680,6 +682,9 @@ align-items: center;
 .socialDiv.dark a {
     color: #fff;
 }
+.infoDiv.dark a {
+    color: #fff;
+}
 .workMainDiv .socialDiv.dark .textDiv span:nth-child(2) {
     color: #fff
 }
@@ -768,6 +773,11 @@ align-items: center;
 }
 .bottomNavBar.onTop .profile-icon {
     opacity: 1;
+    height: 8vh;
+    width: 5vh;
+    object-fit: cover;
+    border-radius: unset;
+    background: transparent;
 }
 .cv-close {
     position: absolute;
@@ -811,18 +821,23 @@ align-items: center;
         width: 130px; */
         /* left: 0px;
         top: -58px; */
-        left: 0vh;
+        left: unset;
+        width: 34vh;
+        right: -9vh;
+        top: 7vh;
     }
     .profileInfo {
         left: 0vh;
-        top: -9vh;
+        top: 0vh;
     }
     .coverBtn {
-        top: -6vh;
+        top: 0vh;
         left: 0vh;
+        align-items: flex-start;
     }
     .coverBtn button {
         margin-left: 0;
+        width: auto;
     }
     /* .bottomNavBar {
         height: 8vh;
@@ -990,6 +1005,12 @@ align-items: center;
     }
     .profile-icon {
         display: none;
+    }
+    .profileName {
+        font-size: 4vh;
+    }
+    .profileSubText {
+        font-size: 2vh;
     }
 }
 @media only screen and (min-width: 500px) and (max-width: 900px) and (orientation: landscape){

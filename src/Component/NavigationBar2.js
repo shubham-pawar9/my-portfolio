@@ -108,12 +108,21 @@ const NavigationBar2 = ({ dimensions, darkMode }) => {
             </li>
           </a>
         </ul>
-        <img
-          src={process.env.PUBLIC_URL + "/images/profile.jpg"}
-          alt="account"
-          className="profile-icon"
-          onClick={scrollToTop}
-        />
+        {darkMode ? (
+          <img
+            src={process.env.PUBLIC_URL + "/images/profile-dark.png"}
+            alt="account"
+            className="profile-icon"
+            onClick={scrollToTop}
+          />
+        ) : (
+          <img
+            src={process.env.PUBLIC_URL + "/images/profile-light.png"}
+            alt="account"
+            className="profile-icon"
+            onClick={scrollToTop}
+          />
+        )}
       </div>
     </>
   );

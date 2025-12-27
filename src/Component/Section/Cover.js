@@ -1,7 +1,8 @@
 import { NavLink } from "react-router-dom";
 import NavigationBar from "../NavigationBar";
 import { useState } from "react";
-const Cover = ({ handleShowCV }) => {
+const Cover = ({ handleShowCV, darkMode }) => {
+  console.log("darkMode", darkMode);
   const handleCallMe = () => {
     let phoneNumber = "+917843068183";
     window.location.href = "tel:" + phoneNumber;
@@ -10,17 +11,31 @@ const Cover = ({ handleShowCV }) => {
     <>
       <div id="cover" className="coverPage profile allMainDiv">
         <div className="coverImg">
-          <img
-            src={process.env.PUBLIC_URL + "/images/cover.jpg"}
-            alt="coverImage"
-          />
+          {darkMode ? (
+            <img
+              src={process.env.PUBLIC_URL + "/images/cover-dark.png"}
+              alt="coverImage"
+            />
+          ) : (
+            <img
+              src={process.env.PUBLIC_URL + "/images/cover-light.png"}
+              alt="coverImage"
+            />
+          )}
         </div>
         <div className="coverBottom">
           <div className="profileImg">
-            <img
-              src={process.env.PUBLIC_URL + "/images/profile.jpg"}
-              alt="profileImage"
-            />
+            {darkMode ? (
+              <img
+                src={process.env.PUBLIC_URL + "/images/profile-dark.png"}
+                alt="profileImage"
+              />
+            ) : (
+              <img
+                src={process.env.PUBLIC_URL + "/images/profile-light.png"}
+                alt="profileImage"
+              />
+            )}
           </div>
           <div className="profileInfo">
             <p className="profileName">Shubham Pawar</p>
